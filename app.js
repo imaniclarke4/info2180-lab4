@@ -1,32 +1,32 @@
-window.onload = function() {
+window.onload = function(){
 
-    var loadTextBtn = document.querySelector('#loadTextBtn');
+    var Btn = document.getElementsByTagName("button");
     var httpRequest;
 
-    loadTextBtn.addEventListener('click',function(button){
-        button.preventDefault();
 
-        httpRequest = new XMLHttpRequest();
-
+    Btn.addEventListener("click",function(element){
+        element.preventDefault();
+        
+        httpRequest = newXMLHttpRequest();
+        
         // GET Request
-        var url = "http://localhost/info2180-lab4/superheroes.php.";
-        httpRequest.onreadystatechange = doSomething;
+        var url = "http://localhost/info2180-lab4/superheroes.php"; 
+        httpRequest.onreadystatechange = getHero;
         httpRequest.open('GET',url);
         httpRequest.send();
 
+       
     });
 
-    function doSomething(){
-        if (httpRequest.readyState === XMLHttpRequest.DONE) {
-          if(httpRequest.status === 200) {
-              var response =  httpRequest.responseText;
-              var quote = document.querySelector('#quote');
-              quote.innerHTML = response;
-          }else {
-              alert('There was a problem with the request.');
-          }
-        
-
-        }
+    function getHero(){
+      if (httpRequest.readyState == XMLHttpRequest.DONE){
+          if(httpRequest.status == 200){
+              var response = http.responseText;
+              alert(response);
+              console.log(response);
+            }else{
+              alert("There is a problem with request.");
+            }
+        }  
     }
-};
+}

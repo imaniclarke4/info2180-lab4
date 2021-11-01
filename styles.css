@@ -1,0 +1,54 @@
+*{
+    font-size:18px;
+    color: #2D3748;
+    font-family:-apple-system,BlinkMacSystemFont,"SegoeUI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sansserif;
+}
+
+body{
+    margin:0;
+}
+
+header{
+    background-color: rgb(85, 126, 170);
+    padding-left:10%;
+    padding-right:10%;
+    margin-top:0px;
+    padding-top:5px;
+    padding-bottom:5px;
+
+}
+
+h1{
+   color: white; 
+   font-size: 50px;
+   text-align: center;
+   font-family: Arial;
+}
+
+h3{
+    justify-content: left;
+}
+
+form{
+    display:flex;
+    justify-content: left;
+}
+
+input{
+    padding-right: 10px;
+    margin-right: 40%;
+    border-radius: 5px;
+    padding:10px;
+    width:450px;
+}
+
+button{
+    float: right;
+    margin-left:0% ;
+    background-color:rgb(180, 7, 7);
+    margin-bottom:10%;
+    border-radius: 5px;
+    color: white;
+    width:150px;
+    padding:10px;
+}
